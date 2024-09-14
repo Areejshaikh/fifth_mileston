@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shareable Resume Builder</title>
+</head>
+
+<body>
+    <h1>Shareable Resume Builder</h1>
+    <div class="ProfileImg">
+        <a href="" download="download"></a>
+        <img src="profile.jpg" alt="profile Picture" >
+    </div>
+
+    <!-- fieldset Personal Information -->
+    <form action="" id="resume-form">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div class="formGroup">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your Name">
+            </div>
+            <div class="formGroup">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your Email">
+            </div>
+            <div class="formGroup">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter Your Phone Number">
+            </div>
+        </fieldset>
+        <!-- fieldset Education-->
+        <fieldset>
+            <legend>Education</legend>
+            <input type="text" id="education" name="education" placeholder="Describe your Education:" required>
+        </fieldset>
+        <!-- fieldset Skills-->
+        <fieldset>
+            <legend>Skills</legend>
+            <input type="text" id="skills" name="skills" placeholder="Describe your Skills:" required>
+        </fieldset>
+        <!-- fieldset Experience-->
+        <fieldset>
+            <legend>Work Experience</legend>
+            <input type="text" id="experience" name="experience" placeholder="Describe your Experience:" required>
+        </fieldset>
+        <div id="btn">
+            <button type="button" onclick="generateResume()">Generate Resume</button>
+        </div>
+    </form>
+
+
+
+    <!--Dynamic Resume-->
+    <div id="resume-display"  contenteditable="true">
+        <!--Resume will be generated below-->
+    </div>
+     <div id="share-options">
+        <p id="share-url"></p>
+        <button onclick="copyURL()">Copy URL</button>
+        <button onclick="shareViaEmail()">Share via Email</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
